@@ -240,10 +240,7 @@ def list_products():
         app.logger.info("Find by category: %s", category)
         # create enum from string
         category_value = getattr(Category, category.upper())
-        # category_value = Category() in ["Category.UNKNOWN","Category.CLOTHS","Category.FOOD","Category.HOUSEWARES","Category.AUTOMOTIVE","","Category.TOOLS","1"]
-        # category_value = "CLOTHS"
         products = Product.find_by_category(category_value)
-        # products = Product.all()
     elif available:
         app.logger.info("Find by available: %s", available)
         # create bool from string
